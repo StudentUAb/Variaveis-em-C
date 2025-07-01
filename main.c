@@ -3,7 +3,7 @@
 
 #include <locale.h>
 
-void main() {
+int main(void) {
 
     //permite utilizar acentos
     setlocale(LC_ALL,"");
@@ -21,17 +21,15 @@ void main() {
     float b = 5.5;
     printf("O valor de b é %f \n",b);
     scanf("%f", &b);
-    printf("O valor de a mudou para %f \n" ,b);
+    printf("O valor de b mudou para %f \n" ,b);
 
     // trabalhando com caracteres
     char c = 't';
     printf("O valor de c é %c \n",c);
 
-    //limpar o buffer da entrada principal
-    fflush(stdin);
-
     // mudar o valor de varievel de caracter
-    scanf("%c", &c);
+    scanf(" %c", &c);
     printf("O valor de c mudou para %c \n" ,c);
 
+    return 0;
 }
